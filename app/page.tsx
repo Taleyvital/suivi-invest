@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Settings, TrendingUp, TrendingDown, Plus } from "lucide-react";
 import { usePortfolio } from "./lib/context";
 import { calcTotals, fmt, fmtPct, stockPct } from "./lib/helpers";
@@ -11,13 +11,21 @@ import { GainBadge } from "./components/gain-badge";
 import { SplashScreen } from "./components/splash-screen";
 import { StockAvatar } from "./components/stock-avatar";
 
+const SPLASH_MIN_MS = 2800;
+
 export default function DashboardPage() {
   const { portfolio, hydrated } = usePortfolio();
+  const [splashDone, setSplashDone] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setSplashDone(true), SPLASH_MIN_MS);
+    return () => clearTimeout(t);
+  }, []);
 
   const totals = useMemo(() => calcTotals(portfolio), [portfolio]);
   const positive = totals.gain >= 0;
 
-  if (!hydrated) return <SplashScreen />;
+  if (!hydrated || !splashDone) return <SplashScreen />;
 
   return (
     <div className="flex flex-col min-h-dvh bg-[#131313]">
