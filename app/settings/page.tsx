@@ -58,7 +58,7 @@ export default function SettingsPage() {
     <div className="flex flex-col min-h-dvh bg-[#131313]">
       <PageHeader title="Paramètres" onBack={() => router.push("/")} />
 
-      <main className="flex-1 mt-[56px] pb-12 px-5 flex flex-col gap-6 py-6 overflow-y-auto scrollbar-none">
+      <main className="flex-1 pb-12 px-5 flex flex-col gap-6 py-6 overflow-y-auto scrollbar-none" style={{ marginTop: "calc(56px + env(safe-area-inset-top))" }}>
 
         {/* Profile card */}
         <div className="bg-[#201f1f] rounded-xl border border-[#414755] px-5 py-5 flex items-center gap-4 relative overflow-hidden">

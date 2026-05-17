@@ -83,6 +83,7 @@ html, body {
   background: rgb(19, 19, 19);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  padding-top: env(safe-area-inset-top);
 }
 
 .glass-nav {

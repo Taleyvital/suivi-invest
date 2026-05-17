@@ -92,7 +92,7 @@ export default function StockDetailPage({
     <div className="flex flex-col min-h-dvh bg-[#131313]">
       <PageHeader title="Détails de la position" actions={actions} />
 
-      <main className="flex-1 mt-[56px] pb-36 px-5 flex flex-col gap-5 py-6 overflow-y-auto scrollbar-none">
+      <main className="flex-1 pb-36 px-5 flex flex-col gap-5 py-6 overflow-y-auto scrollbar-none" style={{ marginTop: "calc(56px + env(safe-area-inset-top))" }}>
 
         {/* Stock header */}
         <section className="flex flex-col gap-1">

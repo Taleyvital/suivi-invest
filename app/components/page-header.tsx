@@ -13,7 +13,7 @@ export function PageHeader({ title, actions, onBack }: PageHeaderProps) {
   const router = useRouter();
 
   return (
-    <header className="fixed top-0 w-full z-50 flex items-center justify-between px-5 h-[56px] glass-header border-b border-[#414755]/30">
+    <header className="fixed top-0 w-full z-50 flex items-center justify-between px-5 min-h-[56px] pb-2 glass-header border-b border-[#414755]/30">
       <button
         onClick={onBack ?? (() => router.back())}
         className="w-10 h-10 flex items-center justify-center text-[#e5e2e1] active:scale-90 transition-transform"

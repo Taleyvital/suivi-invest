@@ -51,7 +51,7 @@ function AddStockForm() {
     <div className="flex flex-col min-h-dvh bg-[#131313]">
       <PageHeader title={isEdit ? "Modifier la position" : "Nouvelle Action"} />
 
-      <main className="flex-1 mt-[56px] pb-36 px-5 flex flex-col gap-6 py-6 overflow-y-auto scrollbar-none">
+      <main className="flex-1 pb-36 px-5 flex flex-col gap-6 py-6 overflow-y-auto scrollbar-none" style={{ marginTop: "calc(56px + env(safe-area-inset-top))" }}>
 
         {/* Ticker */}
         <div className="flex flex-col gap-1.5">

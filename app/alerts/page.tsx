@@ -39,7 +39,7 @@ export default function AlertsPage() {
         </div>
       </header>
 
-      <main className="flex-1 mt-[56px] pb-[88px] px-5 flex flex-col gap-6 py-6 overflow-y-auto scrollbar-none">
+      <main className="flex-1 pb-[88px] px-5 flex flex-col gap-6 py-6 overflow-y-auto scrollbar-none" style={{ marginTop: "calc(56px + env(safe-area-inset-top))" }}>
 
         {/* Gains section */}
         {gains.length > 0 && (

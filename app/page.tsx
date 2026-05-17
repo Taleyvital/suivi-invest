@@ -30,7 +30,7 @@ export default function DashboardPage() {
   return (
     <div className="flex flex-col min-h-dvh bg-[#131313]">
       {/* Header */}
-      <header className="fixed top-0 w-full z-50 flex items-center justify-between px-5 h-[56px] glass-header border-b border-[#414755]/30">
+      <header className="fixed top-0 w-full z-50 flex items-center justify-between px-5 min-h-[56px] pb-2 glass-header border-b border-[#414755]/30">
         <div className="flex items-center gap-2.5">
           <div className="relative w-8 h-8 rounded-lg overflow-hidden bg-white shrink-0 shadow-sm">
             <Image
@@ -54,7 +54,7 @@ export default function DashboardPage() {
       </header>
 
       {/* Scrollable content */}
-      <main className="flex-1 mt-[56px] pb-[88px] px-5 flex flex-col gap-8 py-6 overflow-y-auto scrollbar-none">
+      <main className="flex-1 pb-[88px] px-5 flex flex-col gap-8 py-6 overflow-y-auto scrollbar-none" style={{ marginTop: "calc(56px + env(safe-area-inset-top))" }}>
 
         {/* Hero glassmorphism card */}
         <section className="glass-card rounded-xl p-8 flex flex-col gap-1 shadow-xl relative overflow-hidden">
