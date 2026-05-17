@@ -6,10 +6,16 @@
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#131313",
-  "background_color": "#131313",
+  "background_color": "#ffffff",
   "lang": "fr",
   "categories": ["finance", "utilities"],
   "icons": [
+    {
+      "src": "/Logo/logo-suivi-invest.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/icons/icon-192.png",
       "sizes": "192x192",

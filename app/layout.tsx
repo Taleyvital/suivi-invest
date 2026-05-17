@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     title: "Invest BRVM",
   },
   icons: {
-    icon: "/icons/icon-192.png",
-    apple: "/icons/icon-192.png",
+    icon: "/Logo/logo-suivi-invest.png",
+    apple: "/Logo/logo-suivi-invest.png",
   },
 };
 

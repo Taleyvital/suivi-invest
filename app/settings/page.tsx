@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import {
   Download,
   Trash2,
@@ -62,8 +63,13 @@ export default function SettingsPage() {
         {/* Profile card */}
         <div className="bg-[#201f1f] rounded-xl border border-[#414755] px-5 py-5 flex items-center gap-4 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-20 h-20 bg-[#adc6ff]/5 blur-2xl -mr-6 -mt-6 rounded-full pointer-events-none" />
-          <div className="w-14 h-14 rounded-full bg-[#353534] border border-[#414755] flex items-center justify-center text-2xl font-bold text-[#adc6ff] shrink-0">
-            V
+          <div className="relative w-14 h-14 rounded-2xl overflow-hidden bg-white shrink-0 shadow-md shadow-[#4b8eff]/10">
+            <Image
+              src="/Logo/logo-suivi-invest.png"
+              alt="Suivi Invest"
+              fill
+              className="object-contain p-1"
+            />
           </div>
           <div>
             <p className="text-base font-bold text-[#e5e2e1]">Vital</p>

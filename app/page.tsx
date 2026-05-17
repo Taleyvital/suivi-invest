@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useMemo } from "react";
-import { Settings, Menu, TrendingUp, TrendingDown, Plus } from "lucide-react";
+import { Settings, TrendingUp, TrendingDown, Plus } from "lucide-react";
 import { usePortfolio } from "./lib/context";
 import { calcTotals, fmt, fmtPct, stockPct } from "./lib/helpers";
 import { BottomNav } from "./components/bottom-nav";
@@ -22,10 +23,16 @@ export default function DashboardPage() {
     <div className="flex flex-col min-h-dvh bg-[#131313]">
       {/* Header */}
       <header className="fixed top-0 w-full z-50 flex items-center justify-between px-5 h-[56px] glass-header border-b border-[#414755]/30">
-        <div className="flex items-center gap-3">
-          <button className="text-[#adc6ff] active:scale-90 transition-transform">
-            <Menu size={22} />
-          </button>
+        <div className="flex items-center gap-2.5">
+          <div className="relative w-8 h-8 rounded-lg overflow-hidden bg-white shrink-0 shadow-sm">
+            <Image
+              src="/Logo/logo-suivi-invest.png"
+              alt="Suivi Invest"
+              fill
+              className="object-contain p-0.5"
+              priority
+            />
+          </div>
           <h1 className="text-lg font-bold text-[#adc6ff] tracking-tight">
             Bonjour, Youssouf
           </h1>
