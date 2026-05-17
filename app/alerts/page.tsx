@@ -29,7 +29,7 @@ export default function AlertsPage() {
   return (
     <div className="flex flex-col min-h-dvh bg-[#131313]">
       {/* Header */}
-      <header className="fixed top-0 w-full z-50 flex items-center justify-between px-5 h-[56px] glass-header border-b border-[#414755]/30">
+      <header className="fixed top-0 w-full z-50 flex items-center justify-between px-5 min-h-[56px] pb-2 glass-header border-b border-[#414755]/30">
         <div>
           <h1 className="text-base font-bold text-[#e5e2e1] leading-tight">Alertes</h1>
           <span className="text-[10px] font-mono text-[#8b90a0]">Suivi des performances</span>
