@@ -8,7 +8,7 @@ import { usePortfolio } from "./lib/context";
 import { calcTotals, fmt, fmtPct, stockPct } from "./lib/helpers";
 import { BottomNav } from "./components/bottom-nav";
 import { GainBadge } from "./components/gain-badge";
-import { Spinner } from "./components/spinner";
+import { SplashScreen } from "./components/splash-screen";
 import { StockAvatar } from "./components/stock-avatar";
 
 export default function DashboardPage() {
@@ -17,7 +17,7 @@ export default function DashboardPage() {
   const totals = useMemo(() => calcTotals(portfolio), [portfolio]);
   const positive = totals.gain >= 0;
 
-  if (!hydrated) return <Spinner />;
+  if (!hydrated) return <SplashScreen />;
 
   return (
     <div className="flex flex-col min-h-dvh bg-[#131313]">

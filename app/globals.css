@@ -80,7 +80,13 @@ html, body {
 }
 
 .glass-header {
-  background: rgba(19, 19, 19, 0.85);
+  background: rgb(19, 19, 19);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-nav {
+  background: rgb(19, 19, 19);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
