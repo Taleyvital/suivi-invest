@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+stitch_premium_stock_portfolio_pwa/
+AGENTS.md
+CLAUDE.md
